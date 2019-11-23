@@ -1,6 +1,6 @@
 #tipContainer {
-  border: 0.0625rem solid black;
-  box-shadow: 0px 2px 2px 0px grey;
+  border: 0.05rem solid black;
+  box-shadow: 2px 2px 2px 2px grey;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
