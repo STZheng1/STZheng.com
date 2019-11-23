@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Tip Calculator</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="site.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="tipContainer" class="tipContainer">
+          <h1>Tip Calculator</h1>
+          <div class="divInput">
+            <label class="final-bill-text" for="finalBill">How much was the total?</label>
+            <input type="number" id="finalBill" placeholder="Enter a number" required>
+          </div>
+          <div class="divRadioButtons">
+            <label>Pick a level of service:</label>
+            <div class="selector">
+              <input type="radio" name="service" value="OK" id="radioOK" disabled="true"><label for="radioOK">OK</label>
+            </div>
+            <div class="selector">
+              <input type="radio" name="service" value="Great" id="radioGreat" disabled="true"><label for="radioGreat">
+                Great</label>
+            </div>
+            <div class="selector">
+              <input type="radio" name="service" value="Amazing" id="radioAmazing" disabled="true"><label
+                for="radioAmazing">Amazing</label>
+            </div>
+          </div>
+          <div class="divButton">
+            <button id="buttonCalcTip" class="calc-button" disabled="true">Calculate Tip</button>
+          </div>
+          <div class="divAnswerSpan">
+            <span id="spanTip"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="site.js"></script>
+</body>
+
+</html>
