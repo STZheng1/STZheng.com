@@ -1,55 +1,55 @@
-<html>
-<head>
-<title>How to Create Scientific Calculator Using HTML, JavaScript and CSS?</title>
-</head>
 <body>
-<form name="sci-calc">
-<table class="calculator" cellspacing="0" cellpadding="1">
-<tr>
-<td colspan="5"><input id="display" name="display" value="0" size="28" maxlength="25"></td>
-</tr>
-<tr>
-<td><input type="button" class="btnTop" name="btnTop" value="C" onclick="this.form.display.value= 0 "></td>
-<td><input type="button" class="btnTop" name="btnTop" value="<--" onclick="deleteChar(this.form.display)"></td>
-<td><input type="button" class="btnTop" name="btnTop" value="=" onclick="if(checkNum(this.form.display.value)) { compute(this.form) }"></td>
-<td><input type="button" class="btnOpps" name="btnOpps" value="&#960;" onclick="addChar(this.form.display,'3.14159265359')"></td>
-<td><input type="button" class="btnMath" name="btnMath" value="%" onclick=" percent(this.form.display)"></td>
-</tr>
-<tr>
-<td><input type="button" class="btnNum" name="btnNum" value="7" onclick="addChar(this.form.display, '7')"></td>
-<td><input type="button" class="btnNum" name="btnNum" value="8" onclick="addChar(this.form.display, '8')"></td>
-<td><input type="button" class="btnNum" name="btnNum" value="9" onclick="addChar(this.form.display, '9')"></td>
-<td><input type="button" class="btnOpps" name="btnOpps" value="x&#94;" onclick="if(checkNum(this.form.display.value)) { exp(this.form) }"></td>
-<td><input type="button" class="btnMath" name="btnMath" value="/" onclick="addChar(this.form.display, '/')"></td>
-<tr>
-<td><input type="button" class="btnNum" name="btnNum" value="4" onclick="addChar(this.form.display, '4')"></td>
-<td><input type="button" class="btnNum" name="btnNum" value="5" onclick="addChar(this.form.display, '5')"></td>
-<td><input type="button" class="btnNum" name="btnNum" value="6" onclick="addChar(this.form.display, '6')"></td>
-<td><input type="button" class="btnOpps" name="btnOpps" value="ln" onclick="if(checkNum(this.form.display.value)) { ln(this.form) }"></td>
-<td><input type="button" class="btnMath" name="btnMath" value="*" onclick="addChar(this.form.display, '*')"></td>
-</tr>
-<tr>
-<td><input type="button" class="btnNum" name="btnNum" value="1" onclick="addChar(this.form.display, '1')"></td>
-<td><input type="button" class="btnNum" name="btnNum" value="2" onclick="addChar(this.form.display, '2')"></td>
-<td><input type="button" class="btnNum" name="btnNum" value="3" onclick="addChar(this.form.display, '3')"></td>
-<td><input type="button" class="btnOpps" name="btnOpps" value="&radic;" onclick="if(checkNum(this.form.display.value)) { sqrt(this.form) }"></td>
-<td><input type="button" class="btnMath" name="btnMath" value="-" onclick="addChar(this.form.display, '-')"></td>
-</tr>
-<tr>
-<td><input type="button" class="btnMath" name="btnMath" value="&#177" onclick="changeSign(this.form.display)"></td>
-<td><input type="button" class="btnNum" name="btnNum" value="0" onclick="addChar(this.form.display, '0')"></td>
-<td><input type="button" class="btnMath" name="btnMath" value="&#46;" onclick="addChar(this.form.display, '&#46;')"></td>
-<td><input type="button" class="btnOpps" name="btnOpps" value="x&#50;" onclick="if(checkNum(this.form.display.value)) { square(this.form) }"></td>
-<td><input type="button" class="btnMath" name="btnMath" value="+" onclick="addChar(this.form.display, '+')"></td>
-</tr>
-<tr>
-<td><input type="button" class="btnMath" name="btnMath" value="(" onclick="addChar(this.form.display, '(')"></td>
-<td><input type="button" class="btnMath" name="btnMath" value=")" onclick="addChar(this.form.display,')')"></td>
-<td><input type="button" class="btnMath" name="btnMath" value="cos" onclick="if(checkNum(this.form.display.value)) { cos(this.form) }"></td>
-<td><input type="button" class="btnMath" name="btnMath" value="sin" onclick="if(checkNum(this.form.display.value)) { sin(this.form) }"></td>
-<td><input type="button" class="btnMath" name="btnMath" value="tan" onclick="if(checkNum(this.form.display.value)) { tan(this.form) }"></td>
-</tr>
-</tabel>
+<div id=”big_wrapper”>
+<h1 id=”heading”>SIMPLE SCIENTIFIC CALCULATOR</h1>
+<div id=”form_wrapper”>
+<form id=”formone” name=”calc”>
+<input id=”display” type=”text” name=”display” value=” ” disabled contenteditable=”false” >
+<br>
+<input class=”button number” type=”button” value=”1” onClick=”calc.display.value+=1”>
+<input class=”button number” type=”button” value=”2” onClick=”calc.display.value+=2”>
+<input class=”button number” type=”button” value=”3” onClick=”calc.display.value+=3”>
+<input class=”button three” type=”button” value=”C” onClick=”Resetfunction(this.form)”>
+<input class=”button three” type=”button” value=”<-” onClick=”backspace(this.form)”>
+<input class=”button three” type=”button” value=”=” onClick=”evaluation(this.form)”>
+<br>
+<input class=”button number” type=”button” value=”4” onClick=”calc.display.value+=4”>
+<input class=”button number” type=”button” value=”5” onClick=”calc.display.value+=5”>
+<input class=”button number” type=”button” value=”6” onClick=”calc.display.value+=6”>
+<input class=”button opps” type=”button” value=”-” onClick=”calc.display.value+=’-‘”>
+<input class=”button opps” type=”button” value=”%” onClick=”calc.display.value+=’%’”>
+<input class=”button” type=”button” value=”cos” onClick=”cos_function()”>
+<br>
+
+
+<input class=”button number” type=”button” value=”7” onClick=”calc.display.value+=7”>
+<input class=”button number” type=”button” value=”8” onClick=”calc.display.value+=8”>
+<input class=”button number” type=”button” value=”9” onClick=”calc.display.value+=9”>
+<input class=”button opps” type=”button” value=”*” onClick=”calc.display.value+=’*’”>
+<input class=”button” type=”button” value=”n!” onClick=”fact_function()”>
+<input class=”button” type=”button” value=”sin” onClick=”sin_function()”>
+<br>
+<input class=”button opps” type=”button” value=”.” onClick=”calc.display.value+=’.’”>
+<input class=”button number” type=”button” value=”0” onClick=”calc.display.value+=0”>
+<input class=”button opps” type=”button” value=”,” onClick=”calc.display.value+=’,’”>
+<input class=”button opps” type=”button” value=”+” onClick=”calc.display.value+=’+’”>
+<input class=”button opps” type=”button” value=”/” onClick=”calc.display.value+=’/’”>
+<input class=”button” type=”button” value=”tan” onClick=”tan_function()”>
+<br>
+<input class=”button” type=”button” value=”E” onClick=”calc.display.value+=2.718”>
+<input class=”button” type=”button” value=”pi” onClick=”calc.display.value+=3.141”>
+<input class=”button” type=”button” value=”x^y” onClick=”power_function()”>
+<input class=”button” type=”button” value=”(” onClick=”openpara(this.value)”>
+<input class=”button” type=”button” value=”)” onClick=”closepara(this.value)”>
+<input class=”button” type=”button” value=”log” onClick=”log_function()”>
+<br>
+<input class=”button” type=”button” value=”sqrt” onClick=”sqrt_function()”>
+<input class=”button” type=”button” value=”LN2” onClick=”calc.display.value+=0.693”>
+<input class=”button” type=”button” value=”LN10” onClick=”calc.display.value+=2.302”>
+<input class=”button” type=”button” value=”log2E” onClick=”calc.display.value+=1.442”>
+<input class=”button” type=”button” value=”log10E” onClick=”calc.display.value+=0.434”>
+<input class=”button” type=”button” value=”EXP” onClick=”exp_function”>
+
 </form>
+</div>
+</div>
 </body>
-</html>
